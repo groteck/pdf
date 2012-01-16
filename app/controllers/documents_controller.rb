@@ -18,7 +18,7 @@ class DocumentsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @document}
-      format.pdf {render :pdf => @document.name + ".pdf", :layout => 'layouts/pdf', :template => '/documents/show.html'}
+      format.pdf {render :pdf => @document.name + ".pdf", :layout => 'layouts/pdf', :template => '/documents/_document.html'}
     end
   end
   def show_pdf
